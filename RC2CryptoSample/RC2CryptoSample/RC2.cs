@@ -33,7 +33,23 @@ namespace RC2CryptoSample
             }
         }
 
-        private const string IV = "00000000";
+        private string _IV;
+        public string IV
+        {
+            get
+            {
+                if (this._IV == null)
+                {
+                    this._IV = "00000000";
+                }
+                return this._IV;
+            }
+            set
+            {
+                this._IV = value;
+            }
+        }
+           
 
 
         public RC2(string cryptoKey, string nomalMessage )
