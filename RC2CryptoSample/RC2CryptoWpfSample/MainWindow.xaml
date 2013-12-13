@@ -1,8 +1,38 @@
 ﻿<Window x:Class="RC2CryptoWpfSample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525" Background="#FFE6E6E6">
+        Title="MainWindow" Height="350" Width="836.429" Background="#FFE6E6E6">
     <Grid>
-        
+        <Grid HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFEBF1FD" >
+                <Label Content="暗号化" FontSize="20" Margin="5"/>
+                <StackPanel Margin="5,2" Orientation="Horizontal">
+                    <Label Content="IV" FontSize="20" MinWidth="100" />
+                    <TextBox Height="23" TextWrapping="Wrap" Text="12345678" Width="200" FontSize="18" Padding="0"/>
+                </StackPanel>
+                <StackPanel Margin="5,2" Orientation="Horizontal">
+                    <Label Content="暗号キー（５文字）" FontSize="20" MinWidth="100" />
+                    <TextBox Height="23" TextWrapping="Wrap" Text="12345" Width="200" FontSize="18" />
+                </StackPanel>
+                <StackPanel Margin="5,2" Orientation="Horizontal">
+                    <Label Content="平文" FontSize="20" MinWidth="100" />
+                    <TextBox Height="23" TextWrapping="Wrap" Text="わんくま同盟" Width="200" FontSize="18" />
+                </StackPanel>
+                <Button Content="暗号！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" />
+                <TextBox TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
+
+            </StackPanel>
+            
+
+
+
+
+        </Grid>
+              
+
     </Grid>
 </Window>
