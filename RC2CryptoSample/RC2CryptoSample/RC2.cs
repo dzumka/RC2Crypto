@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace RC2CryptoSample
 {
-    class Program
+    public class RC2
     {
-        static void Main(string[] args)
-        {
+        
 
 
-
-        }
     }
 }
