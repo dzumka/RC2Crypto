@@ -15,6 +15,14 @@ namespace RC2CryptoSample
 
         private string _NomalMessage;
 
+        public string NomarlMessage
+        {
+            get
+            {
+                return this._NomalMessage;
+            }
+        }
+
         private string _EncryptionMessage;
 
         public string EncryptMessage
@@ -41,16 +49,38 @@ namespace RC2CryptoSample
                 rc2Csp.Key = getByts(this._CryptoKey);
                 rc2Csp.IV = getByts(IV);
 
-                using (ICryptoTransform transform = rc2Csp.CreateEncryptor())
+                using (ICryptoTransform encryptor = rc2Csp.CreateEncryptor())
                 {
                     byte[] source = Encoding.UTF8.GetBytes(_NomalMessage);
-                    byte[] encrypted = transform.TransformFinalBlock(source, 0, source.Length);
+                    byte[] encrypted = encryptor.TransformFinalBlock(source, 0, source.Length);
 
                     _EncryptionMessage = Convert.ToBase64String(encrypted);
                 }
 
             }
         }
+
+
+        public void Decrypt()
+        {
+            using (SymmetricAlgorithm rc2Csp = new RC2CryptoServiceProvider())
+            {
+                rc2Csp.Key = getByts(this._CryptoKey);
+                rc2Csp.IV = getByts(IV);
+
+                using (ICryptoTransform encryptor = rc2Csp.CreateDecryptor())
+                {
+                    byte[] source = Convert.FromBase64String(_EncryptionMessage);
+                    byte[] decrypted = encryptor.TransformFinalBlock(source, 0, source.Length);
+
+                    this._NomalMessage=Encoding.UTF8.GetString(decrypted);
+                }
+            }
+        }
+
+
+
+
 
 
 

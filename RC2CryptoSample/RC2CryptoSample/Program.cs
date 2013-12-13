@@ -26,6 +26,14 @@ namespace RC2CryptoSample
             WriteLine("暗号化 End");
             WriteLine("");
             WriteLine(crypto.EncryptMessage);
+            WriteLine("");
+            WriteLine("");
+
+            WriteLine("復号化 Start");
+            crypto.Decrypt();
+            WriteLine("復号化 End");
+            WriteLine(crypto.NomarlMessage);
+
 
 
             Console.ReadLine();
