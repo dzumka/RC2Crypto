@@ -23,7 +23,7 @@
                     <TextBox x:Name="EncryptNomalMessage" Height="23" TextWrapping="Wrap" Text="わんくま同盟" Width="200" FontSize="18" />
                 </StackPanel>
                 <Button Content="暗号！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" Click="Button_Click" />
-                <TextBox x:Name="EncryptResult" TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
+                <TextBox x:Name="EncryptResult" TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30" FontSize="22"/>
 
             </StackPanel>
 
@@ -43,7 +43,7 @@
                     <TextBox x:Name="DecryptCryptoMessage" Height="23" TextWrapping="Wrap" Text="" Width="200" FontSize="18" />
                 </StackPanel>
                 <Button Content="複合！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" Click="Button_Click_1" />
-                <TextBox x:Name="DecryptResult" TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
+                <TextBox x:Name="DecryptResult" TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30" FontSize="22"/>
 
             </StackPanel>
 
