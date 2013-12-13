@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC2CryptoSample", "RC2CryptoSample\RC2CryptoSample.csproj", "{E2FDFE43-4D69-41C6-A869-9658A8054FB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC2CryptoWpfSample", "RC2CryptoWpfSample\RC2CryptoWpfSample.csproj", "{8E6BD76F-C86B-4588-8A65-5C626B0561F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E2FDFE43-4D69-41C6-A869-9658A8054FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2FDFE43-4D69-41C6-A869-9658A8054FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2FDFE43-4D69-41C6-A869-9658A8054FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6BD76F-C86B-4588-8A65-5C626B0561F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6BD76F-C86B-4588-8A65-5C626B0561F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6BD76F-C86B-4588-8A65-5C626B0561F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6BD76F-C86B-4588-8A65-5C626B0561F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
