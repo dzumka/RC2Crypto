@@ -43,17 +43,24 @@ namespace RC2CryptoWpfSample
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var iv = this.DecryptIv.Text;
-            var key = this.DecryptCryptoKey.Text;
-            var cryptoMessage = this.DecryptCryptoMessage.Text;
+            try
+            {
+                var iv = this.DecryptIv.Text;
+                var key = this.DecryptCryptoKey.Text;
+                var cryptoMessage = this.DecryptCryptoMessage.Text;
 
-            var crp = new RC2(key, "");
-            crp.IV = iv;
-            crp.EncryptMessage = cryptoMessage;
+                var crp = new RC2(key, "");
+                crp.IV = iv;
+                crp.EncryptMessage = cryptoMessage;
 
 
-            crp.Decrypt();
-            this.DecryptResult.Text = crp.NomarlMessage;
+                crp.Decrypt();
+                this.DecryptResult.Text = crp.NomarlMessage;
+            }
+            catch (Exception ex)
+            {
+                this.DecryptResult.Text = "Exception="+ex.Message;
+            }
         }
     }
 }
