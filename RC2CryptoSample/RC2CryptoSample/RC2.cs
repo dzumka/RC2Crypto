@@ -27,6 +27,10 @@ namespace RC2CryptoSample
 
         public string EncryptMessage
         {
+            set
+            {
+                this._EncryptionMessage = value;
+            }
             get
             {
                 return this._EncryptionMessage;
