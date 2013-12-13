@@ -26,9 +26,26 @@
                 <TextBox TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
 
             </StackPanel>
-            
 
 
+            <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFFDEBEB" >
+                <Label Content="複合化" FontSize="20" Margin="5"/>
+                <StackPanel Margin="5,2" Orientation="Horizontal">
+                    <Label Content="IV" FontSize="20" MinWidth="100" />
+                    <TextBox Height="23" TextWrapping="Wrap" Text="12345678" Width="200" FontSize="18" Padding="0"/>
+                </StackPanel>
+                <StackPanel Margin="5,2" Orientation="Horizontal">
+                    <Label Content="暗号キー（５文字）" FontSize="20" MinWidth="100" />
+                    <TextBox Height="23" TextWrapping="Wrap" Text="12345" Width="200" FontSize="18" />
+                </StackPanel>
+                <StackPanel Margin="5,2" Orientation="Horizontal">
+                    <Label Content="暗号文" FontSize="20" MinWidth="100" />
+                    <TextBox Height="23" TextWrapping="Wrap" Text="" Width="200" FontSize="18" />
+                </StackPanel>
+                <Button Content="複合！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" />
+                <TextBox TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
+
+            </StackPanel>
 
 
         </Grid>
