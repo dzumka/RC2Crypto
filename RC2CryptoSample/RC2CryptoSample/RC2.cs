@@ -17,7 +17,15 @@ namespace RC2CryptoSample
 
         private string _EncryptionMessage;
 
-        private const string IV = "000";
+        public string EncryptMessage
+        {
+            get
+            {
+                return this._EncryptionMessage;
+            }
+        }
+
+        private const string IV = "00000000";
 
 
         public RC2(string cryptoKey, string nomalMessage )
@@ -26,14 +34,14 @@ namespace RC2CryptoSample
             this._NomalMessage = nomalMessage;
         }
 
-        public string EncryptString()
+        public void Encrypt()
         {
-            using (SymmetricAlgorithm csp = new DESCryptoServiceProvider())
+            using (SymmetricAlgorithm rc2Csp = new RC2CryptoServiceProvider())
             {
-                csp.Key = getByts(this._CryptoKey);
-                csp.IV = getByts(IV);
+                rc2Csp.Key = getByts(this._CryptoKey);
+                rc2Csp.IV = getByts(IV);
 
-                using (ICryptoTransform transform = csp.CreateEncryptor())
+                using (ICryptoTransform transform = rc2Csp.CreateEncryptor())
                 {
                     byte[] source = Encoding.UTF8.GetBytes(_NomalMessage);
                     byte[] encrypted = transform.TransformFinalBlock(source, 0, source.Length);
