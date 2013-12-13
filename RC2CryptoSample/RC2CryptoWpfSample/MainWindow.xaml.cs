@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RC2CryptoSample;
 
 namespace RC2CryptoWpfSample
 {
@@ -23,6 +24,21 @@ namespace RC2CryptoWpfSample
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var iv = this.EncryptIv.Text;
+            var key = this.EncryptCryptoKey.Text;
+            var message = this.EncryptNomalMessage.Text;
+
+            var crp = new RC2(key, message);
+            crp.IV = iv;
+
+            crp.Encrypt();
+
+            this.EncryptResult.Text = crp.EncryptMessage;
+
         }
     }
 }

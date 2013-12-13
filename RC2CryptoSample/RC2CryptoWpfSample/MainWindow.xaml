@@ -12,18 +12,18 @@
                 <Label Content="暗号化" FontSize="20" Margin="5"/>
                 <StackPanel Margin="5,2" Orientation="Horizontal">
                     <Label Content="IV" FontSize="20" MinWidth="100" />
-                    <TextBox Height="23" TextWrapping="Wrap" Text="12345678" Width="200" FontSize="18" Padding="0"/>
+                    <TextBox x:Name="EncryptIv" Height="23" TextWrapping="Wrap" Text="12345678" Width="200" FontSize="18" Padding="0"/>
                 </StackPanel>
                 <StackPanel Margin="5,2" Orientation="Horizontal">
                     <Label Content="暗号キー（５文字）" FontSize="20" MinWidth="100" />
-                    <TextBox Height="23" TextWrapping="Wrap" Text="12345" Width="200" FontSize="18" />
+                    <TextBox x:Name="EncryptCryptoKey" Height="23" TextWrapping="Wrap" Text="12345" Width="200" FontSize="18" />
                 </StackPanel>
                 <StackPanel Margin="5,2" Orientation="Horizontal">
                     <Label Content="平文" FontSize="20" MinWidth="100" />
-                    <TextBox Height="23" TextWrapping="Wrap" Text="わんくま同盟" Width="200" FontSize="18" />
+                    <TextBox x:Name="EncryptNomalMessage" Height="23" TextWrapping="Wrap" Text="わんくま同盟" Width="200" FontSize="18" />
                 </StackPanel>
-                <Button Content="暗号！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" />
-                <TextBox TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
+                <Button Content="暗号！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" Click="Button_Click" />
+                <TextBox x:Name="EncryptResult" TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
 
             </StackPanel>
 
@@ -32,18 +32,18 @@
                 <Label Content="複合化" FontSize="20" Margin="5"/>
                 <StackPanel Margin="5,2" Orientation="Horizontal">
                     <Label Content="IV" FontSize="20" MinWidth="100" />
-                    <TextBox Height="23" TextWrapping="Wrap" Text="12345678" Width="200" FontSize="18" Padding="0"/>
+                    <TextBox x:Name="DecryptIv" Height="23" TextWrapping="Wrap" Text="12345678" Width="200" FontSize="18" Padding="0"/>
                 </StackPanel>
                 <StackPanel Margin="5,2" Orientation="Horizontal">
                     <Label Content="暗号キー（５文字）" FontSize="20" MinWidth="100" />
-                    <TextBox Height="23" TextWrapping="Wrap" Text="12345" Width="200" FontSize="18" />
+                    <TextBox x:Name="DecryptCryptoKey" Height="23" TextWrapping="Wrap" Text="12345" Width="200" FontSize="18" />
                 </StackPanel>
                 <StackPanel Margin="5,2" Orientation="Horizontal">
                     <Label Content="暗号文" FontSize="20" MinWidth="100" />
-                    <TextBox Height="23" TextWrapping="Wrap" Text="" Width="200" FontSize="18" />
+                    <TextBox x:Name="DecryptCryptoMessage" Height="23" TextWrapping="Wrap" Text="" Width="200" FontSize="18" />
                 </StackPanel>
                 <Button Content="複合！" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="50,10" MinHeight="30" FontSize="18" />
-                <TextBox TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
+                <TextBox x:Name="DecryptResult" TextWrapping="Wrap" Text="" MinHeight="80" Margin="30,10,30,30"/>
 
             </StackPanel>
 
